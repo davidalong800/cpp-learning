@@ -27,9 +27,9 @@ Naming rules I follow:
 ## Build and run
 
 ```bash
-g++ 01_basics/hello.cpp -o hello   # compile
-./hello                            # run (macOS / Linux)
-hello.exe                          # run (Windows)
+clang++ -std=c++17 01_basics/hello.cpp -o hello   # compile
+./hello                                           # run (macOS / Linux)
+hello.exe                                         # run (Windows)
 ```
 
 ## Progress
@@ -47,7 +47,11 @@ hello.exe                          # run (Windows)
 
 ## Requirements
 
-A compiler with C++17 support: Apple clang from Xcode Command Line Tools, or `g++`.
+A compiler with C++17 support. On macOS, `clang++` comes with the Xcode Command Line Tools:
+
+```bash
+xcode-select --install   # install once, if you don't have it yet
+```
 
 ## License
 
