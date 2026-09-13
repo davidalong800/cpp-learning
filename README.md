@@ -24,12 +24,28 @@ Naming rules I follow:
 - the file name describes its content: `name_frame.cpp`, not `task3.cpp`;
 - folders are numbered (`01_`, `02_`) so they sort in order.
 
-## Build and run
+## How to compile and run
+
+Go into the folder with the program, compile it, then run it.
 
 ```bash
-clang++ -std=c++17 01_basics/hello.cpp -o hello   # compile
-./hello                                           # run (macOS / Linux)
-hello.exe                                         # run (Windows)
+cd 01_basics              # go into the folder
+clang++ hello.cpp -o hello   # compile: hello.cpp becomes the program "hello"
+./hello                   # run it
+```
+
+What the commands mean:
+
+- `cd 01_basics` — go into the folder `01_basics`, where the `.cpp` file is;
+- `clang++ hello.cpp -o hello` — compile. `-o hello` sets the name of the finished program;
+- `./hello` — run the program. The `./` means "look for the program in the current folder";
+- without `-o`, the program would be called `a.out`.
+
+To compile another file, replace the name:
+
+```bash
+clang++ age_input.cpp -o age_input
+./age_input
 ```
 
 ## Progress
@@ -47,10 +63,16 @@ hello.exe                                         # run (Windows)
 
 ## Requirements
 
-A compiler with C++17 support. On macOS, `clang++` comes with the Xcode Command Line Tools:
+You only need a compiler. On macOS, `clang++` is already there — check it with:
 
 ```bash
-xcode-select --install   # install once, if you don't have it yet
+clang++ --version
+```
+
+If the command is not found, install the Xcode Command Line Tools:
+
+```bash
+xcode-select --install
 ```
 
 ## License
