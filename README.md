@@ -1,49 +1,54 @@
 # cpp-learning
 
-Мой путь в C++ с нуля. Здесь я храню программы, которые пишу сам, и конспекты к каждому дню.
+My journey learning C++ from scratch. This repository holds the programs I write myself and my study notes for each day.
 
-## Структура
+## Structure
 
 ```
 cpp-learning/
-├── README.md          ← этот файл
-├── .gitignore         ← что не загружать на GitHub
-├── notes/             ← конспекты по дням
+├── README.md          ← this file
+├── LICENSE            ← MIT license
+├── .gitignore         ← what not to upload to GitHub
+├── notes/             ← study notes by day
 │   └── cpp_day01.md
-└── 01_basics/         ← день 1: вывод, переменные, ввод
+└── 01_basics/         ← day 1: output, variables, input
     ├── hello.cpp
     ├── about_me.cpp
     ├── name_frame.cpp
     └── age_input.cpp
 ```
 
-Правила имён, которых я придерживаюсь:
+Naming rules I follow:
 
-- расширение `.cpp`, только латиница, нижний регистр, `_` или `-`;
-- имя файла говорит о содержимом: `name_frame.cpp`, а не `task3.cpp`;
-- папки нумеруются (`01_`, `02_`), чтобы сортировались по порядку.
+- `.cpp` extension, Latin letters only, lowercase, `_` or `-` as separators;
+- the file name describes its content: `name_frame.cpp`, not `task3.cpp`;
+- folders are numbered (`01_`, `02_`) so they sort in order.
 
-## Как собрать и запустить
+## Build and run
 
 ```bash
-g++ 01_basics/hello.cpp -o hello   # собрать
-./hello                            # запустить (macOS / Linux)
-hello.exe                          # запустить (Windows)
+g++ 01_basics/hello.cpp -o hello   # compile
+./hello                            # run (macOS / Linux)
+hello.exe                          # run (Windows)
 ```
 
-## Прогресс
+## Progress
 
-| День | Тема | Файлы | Конспект |
+| Day | Topic | Files | Notes |
 |---|---|---|---|
-| 1 | `cout`, переменные, `cin`, компиляция | `01_basics/` | [notes/cpp_day01.md](notes/cpp_day01.md) |
-| 2 | `getline`, `if` / `else`, логические операторы | — | — |
+| 1 | `cout`, variables, `cin`, compilation | `01_basics/` | [notes/cpp_day01.md](notes/cpp_day01.md) |
+| 2 | `getline`, `if` / `else`, logical operators | — | — |
 
-## Стиль кода
+## Code style
 
-- `std::` пишу явно, `using namespace std;` не использую;
-- перенос строки — `"\n"`, а не `std::endl`;
-- осмысленные имена переменных: `age`, а не `a`.
+- I write `std::` explicitly and never use `using namespace std;`;
+- line breaks use `"\n"`, not `std::endl`;
+- meaningful variable names: `age`, not `a`.
 
-## Сборка
+## Requirements
 
-Требуется компилятор с поддержкой C++17 (Apple clang из Xcode Command Line Tools или `g++`).
+A compiler with C++17 support: Apple clang from Xcode Command Line Tools, or `g++`.
+
+## License
+
+Released under the [MIT License](LICENSE).
