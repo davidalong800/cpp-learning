@@ -1,80 +1,95 @@
 # cpp-learning
 
-My journey learning C++ from scratch. This repository holds the programs I write myself and my study notes for each day.
+Мой путь в C++ с нуля. В этом репозитории лежат программы, которые я пишу сам, и мои конспекты по каждому дню.
 
-## Structure
+## Структура
 
 ```
 cpp-learning/
-├── README.md          ← this file
-├── LICENSE            ← MIT license
-├── .gitignore         ← what not to upload to GitHub
-├── notes/             ← study notes by day
-│   └── cpp_day01.md
-└── 01_basics/         ← day 1: output, variables, input
-    ├── hello.cpp
-    ├── about_me.cpp
-    ├── name_frame.cpp
-    └── age_input.cpp
+├── README.md          ← этот файл
+├── LICENSE            ← лицензия MIT
+├── .gitignore         ← что не выкладывается на GitHub
+├── notes/             ← конспекты по дням
+│   ├── cpp_day01.md
+│   └── cpp_day02.md
+├── 01_basics/         ← день 1: вывод, переменные, ввод
+│   ├── hello.cpp
+│   ├── about_me.cpp
+│   ├── name_frame.cpp
+│   └── age_input.cpp
+└── 02_conditions/     ← день 2: условия и логика
+    ├── getline.cpp
+    ├── if_else.cpp
+    ├── logic.cpp
+    ├── even_odd.cpp
+    └── day02_final.cpp
 ```
 
-Naming rules I follow:
+Правила имён, которых я придерживаюсь:
 
-- `.cpp` extension, Latin letters only, lowercase, `_` or `-` as separators;
-- the file name describes its content: `name_frame.cpp`, not `task3.cpp`;
-- folders are numbered (`01_`, `02_`) so they sort in order.
+- расширение `.cpp`, только латиница, маленькими буквами, разделитель — `_` или `-`;
+- имя файла говорит о содержимом: `name_frame.cpp`, а не `task3.cpp`;
+- папки нумеруются (`01_`, `02_`), чтобы сортировались по порядку дней.
 
-## How to compile and run
+## Как собрать и запустить
 
-Go into the folder with the program, compile it, then run it.
+Захожу в папку с программой, собираю её, потом запускаю.
 
 ```bash
-cd 01_basics              # go into the folder
-clang++ hello.cpp -o hello   # compile: hello.cpp becomes the program "hello"
-./hello                   # run it
+cd 01_basics                 # захожу в папку
+clang++ hello.cpp -o hello   # собираю: из hello.cpp получается программа hello
+./hello                      # запускаю
 ```
 
-What the commands mean:
+Что означают команды:
 
-- `cd 01_basics` — go into the folder `01_basics`, where the `.cpp` file is;
-- `clang++ hello.cpp -o hello` — compile. `-o hello` sets the name of the finished program;
-- `./hello` — run the program. The `./` means "look for the program in the current folder";
-- without `-o`, the program would be called `a.out`.
+- `cd 01_basics` — перейти в папку `01_basics`, где лежит `.cpp`-файл;
+- `clang++ hello.cpp -o hello` — собрать. `-o hello` задаёт имя готовой программы;
+- `./hello` — запустить программу. `./` означает «искать программу в текущей папке»;
+- без `-o` программа назвалась бы `a.out`.
 
-To compile another file, replace the name:
+Для другого файла меняю имя:
 
 ```bash
-clang++ age_input.cpp -o age_input
-./age_input
+cd 02_conditions
+clang++ even_odd.cpp -o even_odd
+./even_odd
 ```
 
-## Progress
+Если установлен `g++`, всё то же самое, только вместо `clang++` пишу `g++`:
 
-| Day | Topic | Files | Notes |
+```bash
+g++ -Wall even_odd.cpp -o even_odd   # -Wall включает предупреждения
+```
+
+## Прогресс
+
+| День | Тема | Файлы | Конспект |
 |---|---|---|---|
-| 1 | `cout`, variables, `cin`, compilation | `01_basics/` | [notes/cpp_day01.md](notes/cpp_day01.md) |
-| 2 | `getline`, `if` / `else`, logical operators | — | — |
+| 1 | `cout`, переменные, `cin`, компиляция | `01_basics/` | [notes/cpp_day01.md](notes/cpp_day01.md) |
+| 2 | `getline`, `if` / `else`, логические операторы, `%` | `02_conditions/` | [notes/cpp_day02.md](notes/cpp_day02.md) |
 
-## Code style
+## Стиль кода
 
-- I write `std::` explicitly and never use `using namespace std;`;
-- line breaks use `"\n"`, not `std::endl`;
-- meaningful variable names: `age`, not `a`.
+- `std::` пишу явно и никогда не использую `using namespace std;`;
+- для переноса строки беру `"\n"`, а не `std::endl`;
+- имена переменных осмысленные: `age`, а не `a`;
+- компилирую с `-Wall` и читаю предупреждения так же внимательно, как ошибки.
 
-## Requirements
+## Что нужно
 
-You only need a compiler. On macOS, `clang++` is already there — check it with:
+Нужен только компилятор. На macOS `clang++` уже установлен — проверить можно так:
 
 ```bash
 clang++ --version
 ```
 
-If the command is not found, install the Xcode Command Line Tools:
+Если команда не найдена, ставлю Xcode Command Line Tools:
 
 ```bash
 xcode-select --install
 ```
 
-## License
+## Лицензия
 
-Released under the [MIT License](LICENSE).
+Распространяется по [лицензии MIT](LICENSE).
