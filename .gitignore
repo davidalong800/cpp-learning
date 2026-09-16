@@ -5,6 +5,13 @@
 01_basics/name_frame
 01_basics/age_input
 
+# День 2 — то же самое: только собранные программы, исходники .cpp остаются
+02_conditions/getline
+02_conditions/if_else
+02_conditions/logic
+02_conditions/even_odd
+02_conditions/day02_final
+
 # На будущее — общие правила для всех папок с задачами
 *.o
 *.out
