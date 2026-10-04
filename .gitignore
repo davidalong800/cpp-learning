@@ -12,6 +12,17 @@
 02_conditions/even_odd
 02_conditions/day02_final
 
+# День 3 — switch и циклы: собранные программы
+03_switch_loops/switch
+03_switch_loops/while
+03_switch_loops/while_countdown
+03_switch_loops/while_even
+03_switch_loops/for
+03_switch_loops/for_even
+03_switch_loops/for_count_even
+03_switch_loops/for_count_odd
+03_switch_loops/for_sum_even
+
 # На будущее — общие правила для всех папок с задачами
 *.o
 *.out
