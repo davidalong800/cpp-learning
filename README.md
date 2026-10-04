@@ -17,19 +17,29 @@ cpp-learning/
 │   ├── about_me.cpp
 │   ├── name_frame.cpp
 │   └── age_input.cpp
-└── 02_conditions/     ← день 2: условия и логика
+├── 02_conditions/     ← день 2: условия и логика
     ├── getline.cpp
     ├── if_else.cpp
     ├── logic.cpp
     ├── even_odd.cpp
     └── day02_final.cpp
+└── 03_switch_loops/   ← день 3: switch и циклы
+    ├── switch.cpp
+    ├── while.cpp
+    ├── while_countdown.cpp
+    ├── while_even.cpp
+    ├── for.cpp
+    ├── for_even.cpp
+    ├── for_count_even.cpp
+    ├── for_count_odd.cpp
+    └── for_sum_even.cpp
 ```
 
 Правила имён, которых я придерживаюсь:
 
 - расширение `.cpp`, только латиница, маленькими буквами, разделитель — `_` или `-`;
 - имя файла говорит о содержимом: `name_frame.cpp`, а не `task3.cpp`;
-- папки нумеруются (`01_`, `02_`), чтобы сортировались по порядку дней.
+- папки нумеруются (`01_`, `02_`, `03_`), чтобы сортировались по порядку дней.
 
 ## Как собрать и запустить
 
@@ -68,6 +78,7 @@ g++ -Wall even_odd.cpp -o even_odd   # -Wall включает предупреж
 |---|---|---|---|
 | 1 | `cout`, переменные, `cin`, компиляция | `01_basics/` | [notes/cpp_day01.md](notes/cpp_day01.md) |
 | 2 | `getline`, `if` / `else`, логические операторы, `%` | `02_conditions/` | [notes/cpp_day02.md](notes/cpp_day02.md) |
+| 3 | `switch`, циклы `while` и `for`, чётные и нечётные числа | `03_switch_loops/` | — |
 
 ## Стиль кода
 
